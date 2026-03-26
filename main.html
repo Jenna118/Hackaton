@@ -1,163 +1,11 @@
-<!-- <!doctype html>
-<html lang="nl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Campus UI</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#222;color:#000}.app{width:430px;max-width:100%;min-height:100vh;margin:0 auto;background:#2b2b2b}.page{display:none;min-height:100vh}.page.active{display:block}.top{height:102px;background:#38c7d4;border-bottom:1px solid #111;display:flex;align-items:center;justify-content:space-between;padding:0 18px}.burger,.back{background:none;border:0;font-size:54px;line-height:1;cursor:pointer}.logo{font-size:84px;font-weight:700;line-height:1}.inner{padding:18px}.title{font-size:42px;line-height:.95;margin:8px 0 6px}.sub{font-size:17px;margin:0 0 18px}.card{background:#ececec;border:2px solid #555;border-radius:14px;box-shadow:0 8px 16px rgba(0,0,0,.28);padding:16px;margin-bottom:22px}.note{font-size:14px}.note ul{margin:0;padding-left:18px}.form{min-height:420px;padding:22px 16px 18px}.row{display:grid;grid-template-columns:128px 1fr;gap:18px;align-items:center;margin-bottom:24px}.lab{height:46px;border:1px solid #69a9ff;border-radius:10px;display:flex;align-items:center;padding:0 12px;background:#f7f7f7;font-size:14px}.line{height:46px;border-bottom:1px solid #777;display:flex;align-items:center}.line input{width:100%;border:0;background:none;outline:none;font-size:14px}.muted{color:#b5b5b5;font-size:14px}.caret{margin-left:auto;font-size:18px}.mainbtn{display:block;width:190px;height:54px;margin:70px auto 0;border:1px solid #333;border-radius:10px;background:#8ed2df;cursor:pointer}.mapbox{height:330px;background:#f3f3f3;display:flex;align-items:center;justify-content:center;overflow:hidden}.mapbox img,.popmap img{max-width:100%;max-height:100%}.section{font-size:14px;margin:0 0 10px}.routegrid{display:grid;grid-template-columns:1fr auto;gap:16px 18px}.stack{display:flex;flex-direction:column;gap:10px}.blue{width:125px;height:28px;border:1px solid #444;border-radius:8px;background:#8ed2df}.red{width:95px;height:34px;border:1px solid #444;border-radius:8px;background:#ff3434;margin-top:58px}.miniGrid{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}.mini{display:flex;gap:10px;align-items:center}.txt{height:24px;flex:1;border:1px solid #555;border-radius:8px;background:#f8f8f8}.tgl{width:44px;height:24px;border:1px solid #555;border-radius:8px;position:relative;background:#fff}.tgl:after{content:'';position:absolute;left:4px;top:3px;width:16px;height:16px;border:1px solid #555;border-radius:6px;background:#f2f2f2}.tabs{display:flex;gap:8px;margin-bottom:18px}.tab{height:36px;padding:0 14px;border:1px solid #444;border-radius:10px;background:#93d7b0;font-size:14px;cursor:pointer}.tab.off{background:#96b0ac}.panel{padding:18px}.setting{min-height:360px;padding:26px 18px}.hd{font-size:14px;margin:12px 0 8px}.pill{height:24px;width:124px;border:1px solid #555;border-radius:7px;background:#fafafa}.srow{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.preview{height:154px;border:1px solid #555;border-radius:10px;background:#f5f5f5;margin-bottom:18px}.slider{margin-top:52px}.barwrap{height:56px;border:1px solid #555;border-radius:10px;padding:0 12px;display:flex;align-items:center;gap:14px}.bar{flex:1;height:8px;border:1px solid #555;border-radius:99px;background:#fff}.a1{font-size:20px}.a2{font-size:44px;line-height:1}.menu{position:fixed;top:0;left:50%;transform:translateX(-50%);width:430px;max-width:100%;height:100vh;background:#ea6b8d;display:none;z-index:30}.menu.open{display:block}.menu a,.menu button{display:block;width:100%;height:54px;border:0;border-top:1px solid #111;background:#e08bbe;text-align:left;padding:0 16px;font-size:18px;cursor:pointer}.menu .sp{height:372px;background:#ea6b8d;border-top:1px solid #111;border-bottom:1px solid #111}.menu .login{background:none;text-align:left;padding:0 16px;font-size:20px;height:auto;position:absolute;bottom:22px;left:0}.loginpage{text-align:center}.brand{font-size:31px;font-weight:700;line-height:1.05;margin:14px 0 28px}.avatar{width:194px;height:194px;border-radius:50%;background:#ececec;margin:0 auto 58px;position:relative}.avatar:before{content:'';position:absolute;left:68px;top:30px;width:58px;height:58px;border-radius:50%;background:#8ed2df}.avatar:after{content:'';position:absolute;left:51px;bottom:32px;width:92px;height:62px;border-radius:40px 40px 20px 20px;background:#8ed2df}.lform{width:190px;margin:0 auto;text-align:left}.lform label{display:block;font-size:14px;margin-bottom:10px}.inp{width:100%;height:40px;border:1px solid #333;border-radius:7px;background:#f6f6f6;padding:0 12px;margin-bottom:12px}.loginbtn{width:96px;height:30px;border:1px solid #333;border-radius:8px;background:#4baaf3;display:block;margin:18px auto 0}.popup{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:40;padding:14px}.popup.open{display:flex}.popcard{width:430px;max-width:100%;background:#ececec;border:2px solid #555;border-radius:14px;box-shadow:0 8px 16px rgba(0,0,0,.28);padding:14px;position:relative}.close{position:absolute;right:10px;top:4px;background:none;border:0;font-size:54px;cursor:pointer}.popmap{height:380px;background:#f3f3f3;display:flex;align-items:center;justify-content:center;margin-top:24px;margin-bottom:18px}.bg-home{background:linear-gradient(100deg,#447eb3 0 22%,#26a8b4 22% 88%,#8ac0c5 88%)}.bg-route{background:linear-gradient(100deg,#447eb3 0 22%,#26a8b4 22% 88%,#8ac0c5 88%)}.bg-voorzieningen{background:linear-gradient(100deg,#cf2228 0 24%,#c95b78 24% 88%,#d281ae 88%)}.bg-instellingen{background:linear-gradient(100deg,#d19218 0 24%,#d8b100 24% 88%,#d0ca74 88%)}.bg-kaarten{background:linear-gradient(100deg,#41b181 0 24%,#9ab23b 24% 88%,#b4c14e 88%)}
-</style>
-</head>
-<body>
-<div class="app">
-  <div class="menu" id="menu">
-    <div style="height:372px"></div>
-    <button data-go="home">Home</button>
-    <button data-go="instellingen">Instellingen</button>
-    <button data-go="voorzieningen">Toegankelijkheid</button>
-    <button data-go="kaarten">Overzichtskaart</button>
-    <div class="sp"></div>
-    <button class="login" data-go="inloggen">↪ Inloggen</button>
-  </div>
-
-  <section class="page active bg-home" id="home">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
-    <div class="inner">
-      <div class="title">Welkom</div>
-      <div class="sub">bij de Windesheim<br>Campus Navigation Companion</div>
-      <div class="card note"><ul><li>Voorlichting begint over 10 min in 't Circus op verdieping 1</li><li>Rondleiding start om 14:00 uur</li><li>Druk bij ingang 1, gebruik ingang 2</li></ul></div>
-      <div class="card form">
-        <div class="row"><div class="lab">Lokaal</div><div class="line"><input value="" placeholder="Optioneel"></div></div>
-        <div class="row"><div class="lab">Gebouw</div><div class="line"><span class="muted">Optioneel</span><span class="caret">⌄</span></div></div>
-        <div class="row"><div class="lab">Verdieping</div><div class="line"><span class="muted">Optioneel</span><span class="caret">⌄</span></div></div>
-        <button class="mainbtn" id="toRoute">Toon mijn route!</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="page bg-route" id="route">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
-    <div class="inner">
-      <div class="card note"><ul><li>U arriveerd over 6 minuten.</li><li>Druk bij ingang 1, gebruik ingang 2</li><li>Alternatieve route beschikbaar, schakel deze in door op de knop te klikken</li></ul></div>
-      <div class="card"><div class="mapbox" id="openPop"><img src="/mnt/data/fe7d120f-3241-4f24-ae77-e676214b139d.png" alt="kaart"></div></div>
-      <div class="card panel"><p class="section">Alternatieve routes</p><div class="routegrid"><div class="stack"><button class="blue"></button><button class="blue"></button><button class="blue"></button></div><button class="red"></button><div class="miniGrid"><div class="mini"><div class="txt"></div><div class="tgl"></div></div><div class="mini"><div class="txt"></div><div class="tgl"></div></div></div></div></div>
-    </div>
-  </section>
-
-  <section class="page bg-kaarten" id="kaarten">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
-    <div class="inner">
-      <div class="tabs"><button class="tab" id="campusBtn">Campuskaart</button><button class="tab off" id="floorBtn">Verdiepingskaart</button></div>
-      <div class="card"><div class="mapbox"><img id="kaartImg" src="/mnt/data/66a7e5ab-040c-4f86-8101-d07a9313a547.png" alt="kaart"></div></div>
-      <div class="card panel"><p class="section">Faciliteiten</p><div class="miniGrid"><div class="mini"><div class="txt"></div><div class="tgl"></div></div><div class="mini"><div class="txt"></div><div class="tgl"></div></div></div></div>
-    </div>
-  </section>
-
-  <section class="page bg-voorzieningen" id="voorzieningen">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
-    <div class="inner">
-      <div class="card setting"><div class="preview"></div><div class="srow"><div class="pill" style="width:180px"></div><div class="tgl"></div></div><div class="srow"><div class="pill" style="width:144px"></div><div class="tgl"></div></div><div class="slider"><div class="hd">Tekstgrootte</div><div class="barwrap"><div class="a1">A</div><div class="bar"></div><div class="a2">A</div></div></div></div>
-    </div>
-  </section>
-
-  <section class="page bg-instellingen" id="instellingen">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
-    <div class="inner">
-      <div class="card setting"><div class="hd">Taal</div><div class="pill"></div><div class="hd" style="margin-top:48px">Meldingen</div><div class="srow"><div class="pill"></div><div class="tgl"></div></div><div class="hd" style="margin-top:38px">Geluid en trilling</div><div class="srow"><div class="pill"></div><div class="tgl"></div></div><div class="srow"><div class="pill"></div><div class="tgl"></div></div></div>
-    </div>
-  </section>
-
-  <section class="page bg-home" id="inloggen">
-    <div class="top"><button class="back" data-go="home">‹</button><div class="logo">W</div></div>
-    <div class="inner loginpage">
-      <div class="brand">hogeschool<br>Windesheim<br><span style="font-size:20px;font-weight:400">Dichter bij jou</span></div>
-      <div class="avatar"></div>
-      <div class="lform"><label>Log in met je schoolaccount</label><input class="inp" placeholder="E-mail"><input class="inp" placeholder="Wachtwoord"><button class="loginbtn">Inloggen</button></div>
-    </div>
-  </section>
-</div>
-
-<div class="popup" id="popup"><div class="popcard"><button class="close" id="closePop">×</button><div class="popmap"><img src="/mnt/data/923c8fb9-878a-4bd1-8819-8f84fcb603b0.png" alt="groot"></div><div class="card panel" style="margin:0"><p class="section">Alternatieve routes</p><div class="routegrid"><div class="stack"><button class="blue"></button><button class="blue"></button><button class="blue"></button></div><button class="red"></button><div class="miniGrid"><div class="mini"><div class="txt"></div><div class="tgl"></div></div><div class="mini"><div class="txt"></div><div class="tgl"></div></div></div></div></div></div></div>
-
-<script>
-const pages=document.querySelectorAll('.page'),menu=document.getElementById('menu'),popup=document.getElementById('popup'),kaart=document.getElementById('kaartImg');
-const show=id=>{pages.forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');menu.classList.remove('open')};
-document.querySelectorAll('.open').forEach(b=>b.onclick=()=>menu.classList.add('open'));
-document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));
-document.getElementById('toRoute').onclick=()=>show('route');
-document.getElementById('openPop').onclick=()=>popup.classList.add('open');
-document.getElementById('closePop').onclick=()=>popup.classList.remove('open');
-popup.onclick=e=>e.target===popup&&(popup.classList.remove('open'));
-document.getElementById('campusBtn').onclick=()=>{kaart.src='/mnt/data/66a7e5ab-040c-4f86-8101-d07a9313a547.png';campusBtn.className='tab';floorBtn.className='tab off'};
-document.getElementById('floorBtn').onclick=()=>{kaart.src='/mnt/data/59145532-9f34-4e42-a974-88e0fce328fc.png';floorBtn.className='tab';campusBtn.className='tab off'};
-</script>
-</body>
-</html> -->
-
-
-
-
 <!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles.css">
 <title>Campus UI</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#000}
-.app{width:430px;max-width:100%;min-height:100vh;margin:0 auto;background:#fff}
-.page{display:none;min-height:100vh}
-.page.active{display:block}
-.top{height:102px;border-bottom:1px solid #000;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
-.burger,.back,.close{background:none;border:0;font-size:54px;line-height:1;cursor:pointer;color:#000}
-.logo{font-size:84px;font-weight:700;line-height:1}
-.inner{padding:18px}
-.title{font-size:42px;line-height:.95;margin:8px 0 6px}
-.sub{font-size:17px;margin:0 0 18px}
-.card{border:1px solid #000;border-radius:14px;padding:16px;margin-bottom:22px;background:#fff}
-.note{font-size:14px}.note ul{margin:0;padding-left:18px}
-.form{min-height:420px;padding:22px 16px 18px}
-.row{display:grid;grid-template-columns:128px 1fr;gap:18px;align-items:center;margin-bottom:24px}
-.lab{height:46px;border:1px solid #000;border-radius:10px;display:flex;align-items:center;padding:0 12px;font-size:14px}
-.line{height:46px;border-bottom:1px solid #000;display:flex;align-items:center}
-.line input{width:100%;border:0;background:none;outline:none;font-size:14px}
-.muted{color:#666;font-size:14px}
-.caret{margin-left:auto;font-size:18px}
-.mainbtn{display:block;width:190px;height:54px;margin:70px auto 0;border:1px solid #000;border-radius:10px;background:#fff;cursor:pointer}
-.mapbox{height:330px;border:1px solid #000;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.mapbox img,.popmap img{max-width:100%;max-height:100%;filter:grayscale(100%)}
-.section{font-size:14px;margin:0 0 10px}
-.routegrid{display:grid;grid-template-columns:1fr auto;gap:16px 18px}
-.stack{display:flex;flex-direction:column;gap:10px}
-.blue{width:125px;height:28px;border:1px solid #000;border-radius:8px;background:#fff}
-.red{width:95px;height:34px;border:1px solid #000;border-radius:8px;background:#fff;margin-top:58px}
-.miniGrid{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
-.mini{display:flex;gap:10px;align-items:center}
-.txt{height:24px;flex:1;border:1px solid #000;border-radius:8px;background:#fff}
-.tgl{width:44px;height:24px;border:1px solid #000;border-radius:8px;position:relative;background:#fff}
-.tgl:after{content:'';position:absolute;left:4px;top:3px;width:16px;height:16px;border:1px solid #000;border-radius:6px;background:#fff}
-.tabs{display:flex;gap:8px;margin-bottom:18px}
-.tab{height:36px;padding:0 14px;border:1px solid #000;border-radius:10px;background:#fff;font-size:14px;cursor:pointer}
-.tab.off{background:#fff}
-.panel{padding:18px}
-.setting{min-height:360px;padding:26px 18px}
-.hd{font-size:14px;margin:12px 0 8px}
-.pill{height:24px;width:124px;border:1px solid #000;border-radius:7px;background:#fff}
-.srow{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-.preview{height:154px;border:1px solid #000;border-radius:10px;background:#fff;margin-bottom:18px}
-.slider{margin-top:52px}
-.barwrap{height:56px;border:1px solid #000;border-radius:10px;padding:0 12px;display:flex;align-items:center;gap:14px}.bar{flex:1;height:8px;border:1px solid #000;border-radius:99px;background:#fff}.a1{font-size:20px}.a2{font-size:44px;line-height:1}
-.menu{position:fixed;top:0;left:50%;transform:translateX(-50%);width:430px;max-width:100%;height:100vh;display:none;z-index:30;background:#fff}.menu.open{display:block}
-.menu-grid{display:grid;grid-template-columns:49% 51%;height:100%}
-.menu-left{border-right:1px solid #000;display:flex;flex-direction:column}
-.menu-top-space{height:372px;border-bottom:1px solid #000}
-.menu-link{height:54px;border:0;border-bottom:1px solid #000;background:#fff;text-align:left;padding:0 16px;font-size:18px;cursor:pointer}
-.menu-bottom-space{flex:1;border-bottom:1px solid #000}
-.menu-login{background:#fff;border:0;border-bottom:1px solid #000;text-align:left;padding:0 16px;height:54px;font-size:20px;cursor:pointer}
-.loginpage{text-align:center}.brand{font-size:31px;font-weight:700;line-height:1.05;margin:14px 0 28px}.avatar{width:194px;height:194px;border-radius:50%;border:1px solid #000;margin:0 auto 58px;position:relative;background:#fff}.avatar:before{content:'';position:absolute;left:68px;top:30px;width:58px;height:58px;border-radius:50%;border:1px solid #000;background:#fff}.avatar:after{content:'';position:absolute;left:51px;bottom:32px;width:92px;height:62px;border-radius:40px 40px 20px 20px;border:1px solid #000;background:#fff}.lform{width:190px;margin:0 auto;text-align:left}.lform label{display:block;font-size:14px;margin-bottom:10px}.inp{width:100%;height:40px;border:1px solid #000;border-radius:7px;background:#fff;padding:0 12px;margin-bottom:12px}.loginbtn{width:96px;height:30px;border:1px solid #000;border-radius:8px;background:#fff;display:block;margin:18px auto 0}
-.popup{position:fixed;inset:0;background:rgba(0,0,0,.1);display:none;align-items:center;justify-content:center;z-index:40;padding:14px}.popup.open{display:flex}.popcard{width:430px;max-width:100%;background:#fff;border:1px solid #000;border-radius:14px;padding:14px;position:relative}.popmap{height:380px;border:1px solid #000;display:flex;align-items:center;justify-content:center;margin-top:24px;margin-bottom:18px}
-</style>
+
 </head>
 <body>
 <div class="app">
@@ -177,7 +25,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#000}
   </div>
 
   <section class="page active" id="home">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
+    <div class="top"><button class="burger open">☰</button><img src="images/Windesheim_logo_ZG_RGB-DEF.png" class="logo"></div>
     <div class="inner">
       <div class="title">Welkom</div>
       <div class="sub">bij de Windesheim<br>Campus Navigation Companion</div>
@@ -192,7 +40,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#000}
   </section>
 
   <section class="page" id="route">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
+    <div class="top"><button class="burger open">☰</button><img src="images/Windesheim_logo_ZG_RGB-DEF.png" class="logo"></div>
     <div class="inner">
       <div class="card note"><ul><li>U arriveerd over 6 minuten.</li><li>Druk bij ingang 1, gebruik ingang 2</li><li>Alternatieve route beschikbaar, schakel deze in door op de knop te klikken</li></ul></div>
       <div class="card"><div class="mapbox" id="openPop"><img src="/mnt/data/fe7d120f-3241-4f24-ae77-e676214b139d.png" alt="kaart"></div></div>
@@ -201,30 +49,30 @@ body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#000}
   </section>
 
   <section class="page" id="kaarten">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
+    <div class="top"><button class="burger open">☰</button><img src="images/Windesheim_logo_ZG_RGB-DEF.png" class="logo"></div>
     <div class="inner">
       <div class="tabs"><button class="tab" id="campusBtn">Campuskaart</button><button class="tab off" id="floorBtn">Verdiepingskaart</button></div>
-      <div class="card"><div class="mapbox"><img id="kaartImg" src="/mnt/data/66a7e5ab-040c-4f86-8101-d07a9313a547.png" alt="kaart"></div></div>
+      <div class="card"><div class="mapbox"><img id="kaartImg" src="images/map.jpg" alt="kaart"></div></div>
       <div class="card panel"><p class="section">Faciliteiten</p><div class="miniGrid"><div class="mini"><div class="txt"></div><div class="tgl"></div></div><div class="mini"><div class="txt"></div><div class="tgl"></div></div></div></div>
     </div>
   </section>
 
   <section class="page" id="voorzieningen">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
+    <div class="top"><button class="burger open">☰</button><img src="images/Windesheim_logo_ZG_RGB-DEF.png" class="logo"></div>
     <div class="inner">
       <div class="card setting"><div class="preview"></div><div class="srow"><div class="pill" style="width:180px"></div><div class="tgl"></div></div><div class="srow"><div class="pill" style="width:144px"></div><div class="tgl"></div></div><div class="slider"><div class="hd">Tekstgrootte</div><div class="barwrap"><div class="a1">A</div><div class="bar"></div><div class="a2">A</div></div></div></div>
     </div>
   </section>
 
   <section class="page" id="instellingen">
-    <div class="top"><button class="burger open">☰</button><div class="logo">W</div></div>
+    <div class="top"><button class="burger open">☰</button><img src="images/Windesheim_logo_ZG_RGB-DEF.png" class="logo"></div>
     <div class="inner">
       <div class="card setting"><div class="hd">Taal</div><div class="pill"></div><div class="hd" style="margin-top:48px">Meldingen</div><div class="srow"><div class="pill"></div><div class="tgl"></div></div><div class="hd" style="margin-top:38px">Geluid en trilling</div><div class="srow"><div class="pill"></div><div class="tgl"></div></div><div class="srow"><div class="pill"></div><div class="tgl"></div></div></div>
     </div>
   </section>
 
   <section class="page" id="inloggen">
-    <div class="top"><button class="back" data-go="home">‹</button><div class="logo">W</div></div>
+    <div class="top"><button class="back" data-go="home">‹</button><img src="images/Windesheim_logo_ZG_RGB-DEF.png" class="logo"></div>
     <div class="inner loginpage">
       <div class="brand">hogeschool<br>Windesheim<br><span style="font-size:20px;font-weight:400">Dichter bij jou</span></div>
       <div class="avatar"></div>
@@ -233,7 +81,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#000}
   </section>
 </div>
 
-<div class="popup" id="popup"><div class="popcard"><button class="close" id="closePop">×</button><div class="popmap"><img src="/mnt/data/923c8fb9-878a-4bd1-8819-8f84fcb603b0.png" alt="groot"></div><div class="card panel" style="margin:0"><p class="section">Alternatieve routes</p><div class="routegrid"><div class="stack"><button class="blue"></button><button class="blue"></button><button class="blue"></button></div><button class="red"></button><div class="miniGrid"><div class="mini"><div class="txt"></div><div class="tgl"></div></div><div class="mini"><div class="txt"></div><div class="tgl"></div></div></div></div></div></div></div>
+<div class="popup" id="popup"><div class="popcard"><button class="close" id="closePop">×</button><div class="popmap"><img src="images/map.jpg" alt="groot"></div><div class="card panel" style="margin:0"><p class="section">Alternatieve routes</p><div class="routegrid"><div class="stack"><button class="blue"></button><button class="blue"></button><button class="blue"></button></div><button class="red"></button><div class="miniGrid"><div class="mini"><div class="txt"></div><div class="tgl"></div></div><div class="mini"><div class="txt"></div><div class="tgl"></div></div></div></div></div></div></div>
 
 <script>
 const pages=document.querySelectorAll('.page'),menu=document.getElementById('menu'),popup=document.getElementById('popup'),kaart=document.getElementById('kaartImg');
